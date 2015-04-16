@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		{% if patos %}
+		<h1>Estos son tus patos</h1>
+		{% else %}
+		<h1>Ups! NO tienes patos</h1>
+		{% endif %}
+		<ul>
+			{% for pato in patos%}
+			<li>{{pato.nombre}} CUmpleaños {{pato.bd|date:"D d M Y"}} </li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
